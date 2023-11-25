@@ -11,8 +11,8 @@ console.log("seridor aberto na porta " + port);
 });
 
 app.get("/", ( req, res)=>{
-res.send();
-})
+res.sendFile('public/index.html',{root :__dirname});
+});
 
 app.post("/", (req, res)=>{
     console.log(req.body)
