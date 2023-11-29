@@ -18,7 +18,7 @@ app.post("/", (req, res)=>{
     console.log(req.body)
     const {nome, telefone, endereco, descricao, foto} = req.body;
     insertManifestacao(nome,telefone, endereco, descricao, foto);
-    res.redirect('https://site-prefeitura-projeto-integrador.vercel.app/obrigado.html')
+    res.redirect('https://site-prefeitura.onrender.com/obrigado.html')
    
 });
 
