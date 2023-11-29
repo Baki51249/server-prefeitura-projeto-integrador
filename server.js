@@ -16,9 +16,10 @@ res.sendFile('public/index.html',{root :__dirname});
 
 app.post("/", (req, res)=>{
     console.log(req.body)
-const {nome, telefone, endereco, descricao, foto} = req.body;
-insertManifestacao(nome,telefone, endereco, descricao, foto);
-res.send(`<h1> Obrigado pelo manifestação, ${req.body.nome}!</h1>`)
+    const {nome, telefone, endereco, descricao, foto} = req.body;
+    insertManifestacao(nome,telefone, endereco, descricao, foto);
+    res.redirect('https://site-prefeitura-projeto-integrador.vercel.app/obrigado.html')
+   
 });
 
 app.get("/manifestacao", async (req,res)=>{
